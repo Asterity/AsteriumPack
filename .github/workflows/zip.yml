@@ -1,0 +1,19 @@
+on:
+  push:
+  
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4
+    # - name: Zip
+    #   shell: bash
+    #   run: zip -r Asterium.zip ./asterium/assets/ ./asterium/pack.mcmeta ./asterium/pack.png
+    - name: Upload
+      uses: actions/upload-artifact@v4
+      with:
+        name: Asterium Pack
+        path: ./asterium/**/*
+        
+      
