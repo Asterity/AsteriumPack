@@ -34,13 +34,16 @@ const renameMap = [
     ]],
 ]
 
-export default function convert() {
-    const packMeta = readJSON("asterium/pack.mcmeta");
+/**
+ * @param {string} target 
+ */
+export default function convert(target) {
+    const packMeta = readJSON(`${target}/pack.mcmeta`);
     packMeta.pack.pack_format = 1;
-    writeJSON("asterium/pack.mcmeta", packMeta);
+    writeJSON(`${target}/pack.mcmeta`, packMeta);
 
 
-    const texturesDir = "asterium/assets/minecraft/textures";
+    const texturesDir = `${target}/assets/minecraft/textures`;
 
     renameByMap(texturesDir, renameMap);
 }

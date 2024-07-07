@@ -1,8 +1,8 @@
 import fs from "fs";
-import { move } from "../utils/fs_util.mjs";
 
+const target = process.argv[2];
 
-if (fs.existsSync("asterium")) deleteFiles("asterium");
+if (fs.existsSync(target)) deleteFiles(target);
 
 function deleteFiles(path) {
     const target = fs.lstatSync(path);
@@ -17,7 +17,7 @@ function deleteFiles(path) {
     fs.rmdirSync(path);
 }
 
-copy("asterium_backup", "asterium");
+copy("asterium", target);
 
 function copy(from, to) {
     const target = fs.lstatSync(from);
