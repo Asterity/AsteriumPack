@@ -1,5 +1,5 @@
 import fs from "fs";
-import { move } from "./utils/fs_util.mjs";
+import { move } from "../utils/fs_util.mjs";
 
 
 if (fs.existsSync("asterium")) deleteFiles("asterium");
