@@ -1,0 +1,12 @@
+{
+  "name": "asterium_pack",
+  "version": "1.0.0",
+  "description": "",
+  "main": "convert.mjs",
+  "scripts": {
+    "convert:1.8.9": "node convert.mjs 1.8.9"
+  },
+  "keywords": [],
+  "author": "yuko1101 (https://github.com/yuko1101)",
+  "license": "ISC"
+}
