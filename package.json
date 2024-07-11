@@ -5,8 +5,7 @@
   "main": "converter/convert.mjs",
   "scripts": {
     "clone": "node converter/clone.mjs asterium_converted",
-    "convert:1.8.9": "node . 1.8.9 asterium",
-    "convert:1.8.9-dev": "npm run clone && node . 1.8.9 asterium_converted"
+    "convert:1": "npm run clone && node . 1 asterium_converted"
   },
   "keywords": [],
   "author": "yuko1101 (https://github.com/yuko1101)",
