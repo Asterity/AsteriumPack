@@ -10,6 +10,7 @@ run(Number(process.argv[2]));
 async function run(version) {
 
     const packFormat = readJSON(`${target}/pack.mcmeta`).pack.pack_format;
+    if (packFormat === version) return;
 
     const converter = await import(`./${version}/convert.mjs`);
 
