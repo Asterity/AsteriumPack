@@ -1,5 +1,7 @@
 import { readJSON, renameByMap, writeJSON } from "../../utils/fs_util.mjs";
 
+export const requiredPackFormat = 34;
+
 /**
  * @param {string} color 
  */
@@ -37,7 +39,7 @@ const renameMap = [
 /**
  * @param {string} target 
  */
-export default function convert(target) {
+export function convert(target) {
     const packMeta = readJSON(`${target}/pack.mcmeta`);
     packMeta.pack.pack_format = 1;
     writeJSON(`${target}/pack.mcmeta`, packMeta);

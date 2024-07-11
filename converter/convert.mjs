@@ -1,9 +1,22 @@
-(async () => {
+import { readJSON } from "../utils/fs_util.mjs";
 
-    const version = process.argv[2];
-    const target = process.argv[3];
+const target = process.argv[3];
 
-    const convert = (await import(`./${version}/convert.mjs`)).default;
+run(Number(process.argv[2]));
 
-    await convert(target);
-})();
+/**
+ * @param {number} version pack format version to convert to
+ */
+async function run(version) {
+
+    const packFormat = readJSON(`${target}/pack.mcmeta`).pack.pack_format;
+    if (packFormat === version) return;
+
+    const converter = await import(`./${version}/convert.mjs`);
+
+    if (converter.requiredPackFormat !== packFormat) {
+        await run(converter.requiredPackFormat);
+    }
+
+    await converter.convert(target);
+};
