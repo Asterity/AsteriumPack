@@ -1,0 +1,62 @@
+{
+  "variants": {
+    "axis=x": [
+      {
+        "model": "block/infested_deepslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "block/infested_deepslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "block/infested_deepslate",
+        "x": 90,
+        "y": 90
+      },
+      {
+        "model": "block/infested_deepslate",
+        "x": 90,
+        "y": 90
+      }
+    ],
+    "axis=y": [
+      {
+        "model": "block/infested_deepslate"
+      },
+      {
+        "model": "block/infested_deepslate"
+      },
+      {
+        "model": "block/infested_deepslate",
+        "y": 180
+      },
+      {
+        "model": "block/infested_deepslate",
+        "y": 180
+      }
+    ],
+    "axis=z": [
+      {
+        "model": "block/infested_deepslate",
+        "x": 90
+      },
+      {
+        "model": "block/infested_deepslate",
+        "x": 90
+      },
+      {
+        "model": "block/infested_deepslate",
+        "x": 90,
+        "y": 180
+      },
+      {
+        "model": "block/infested_deepslate",
+        "x": 90,
+        "y": 180
+      }
+    ]
+  }
+}
