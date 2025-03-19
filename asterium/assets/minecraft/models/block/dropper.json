@@ -1,0 +1,25 @@
+{
+    "parent": "minecraft:block/block",
+    "textures": {
+        "front": "minecraft:block/dropper_front",
+        "side": "minecraft:block/cobblestone_rs_side",
+        "back": "minecraft:block/cobblestone_rs_back",
+        "top": "minecraft:block/cobblestone_rs_top",
+        "bottom": "minecraft:block/cobblestone_rs_bottom",
+        "particle": "minecraft:block/dropper_front"
+    },
+    "elements": [
+        {
+            "from": [0, 0, 0],
+            "to": [16, 16, 16],
+            "faces": {
+                "down": { "uv": [0, 0, 16, 16], "texture": "#bottom", "cullface": "down" },
+                "up": { "uv": [0, 16, 16, 0], "texture": "#top", "cullface": "up" },
+                "north": { "uv": [0, 0, 16, 16], "texture": "#front", "cullface": "north" },
+                "south": { "uv": [0, 0, 16, 16], "texture": "#back", "cullface": "south" },
+                "west": { "uv": [0, 0, 16, 16], "texture": "#side", "cullface": "west" },
+                "east": { "uv": [16, 0, 0, 16], "texture": "#side", "cullface": "east" }
+            }
+        }
+    ]
+}
