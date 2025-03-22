@@ -1,0 +1,68 @@
+{   "parent": "block/block",
+    "textures": {
+        "particle": "block/anvil_particle",
+        "base_side": "block/anvil_base_side",
+        "base_bottom": "block/anvil_base_bottom",
+        "middle_base_side": "block/anvil_middle_base_side",
+        "middle_base_top": "block/anvil_middle_base_top",
+        "middle_top_long_side": "block/anvil_middle_top_long_side",
+        "middle_top_short_side": "block/anvil_middle_top_short_side",
+        "top_long_side": "block/anvil_top_long_side",
+        "top_short_side": "block/anvil_top_short_side",
+        "top_bottom": "block/anvil_top_bottom"
+    },
+    "display": {
+        "fixed": {
+            "rotation": [ 0, 90, 0 ],
+            "translation": [ 0, 0, 0 ],
+            "scale": [ 0.5, 0.5, 0.5 ]
+        }
+    },
+    "elements": [
+        {   "__comment": "Anvil base",
+            "from": [ 2, 0, 2 ],
+            "to": [ 14, 4, 14 ],
+            "faces": {
+                "down":  { "uv": [ 0,  0, 12, 12 ], "texture": "#base_bottom", "cullface": "down" },
+                "up":    { "uv": [ 0,  0, 12, 12 ], "texture": "#base_bottom" },
+                "north": { "uv": [ 0,  0, 12,  4 ], "texture": "#base_side" },
+                "south": { "uv": [ 0,  0, 12,  4 ], "texture": "#base_side" },
+                "west":  { "uv": [ 0,  0, 12,  4 ], "texture": "#base_side" },
+                "east":  { "uv": [ 0,  0, 12,  4 ], "texture": "#base_side" }
+            }
+        },
+        {   "__comment": "Lower narrow portion",
+            "from": [ 4, 4, 3 ],
+            "to": [ 12, 5, 13 ],
+            "faces": {
+                "up":    { "uv": [ 0,  0,  10, 8 ], "texture": "#middle_base_top", "rotation": 90 },
+                "north": { "uv": [ 0,  0,  8,  1 ], "texture": "#middle_base_side" },
+                "south": { "uv": [ 0,  0,  8,  1 ], "texture": "#middle_base_side" },
+                "west":  { "uv": [ 0,  0, 10,  1 ], "texture": "#middle_base_side" },
+                "east":  { "uv": [ 0,  0, 10,  1 ], "texture": "#middle_base_side" }
+            }
+        },
+        {   "__comment": "Wider section beneath top portion",
+            "from": [ 6, 5, 4 ],
+            "to": [ 10, 10, 12 ],
+            "faces": {
+                "north": { "uv": [ 0,  0,  4,  5 ], "texture": "#middle_top_short_side" },
+                "south": { "uv": [ 0,  0,  4,  5 ], "texture": "#middle_top_short_side" },
+                "west":  { "uv": [ 0,  0,  8,  5 ], "texture": "#middle_top_long_side" },
+                "east":  { "uv": [ 0,  0,  8,  5 ], "texture": "#middle_top_long_side" }
+            }
+        },
+        {   "__comment": "Anvil top",
+            "from": [ 3, 10, 0 ],
+            "to": [ 13, 16, 16 ],
+            "faces": {
+                "down":  { "uv": [ 0,  0, 16, 10 ], "texture": "#top_bottom", "rotation": 90 },
+                "up":    { "uv": [ 0,  0, 16, 10 ], "texture": "#top",   "rotation": 90 },
+                "north": { "uv": [ 0,  0, 10,  6 ], "texture": "#top_short_side" },
+                "south": { "uv": [ 0,  0, 10,  6 ], "texture": "#top_short_side" },
+                "west":  { "uv": [ 0,  0, 16,  6 ], "texture": "#top_long_side" },
+                "east":  { "uv": [ 0,  0, 16,  6 ], "texture": "#top_long_side" }
+            }
+        }
+    ]
+}
