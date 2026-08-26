@@ -1,6 +1,8 @@
 {
   "pack": {
-    "pack_format": 46,
+    "pack_format": 84,
+    "min_format": 84,
+    "max_format": 84,
     "description": "§aAsterium for Minecraft PvP\n§7By §6yuko1101, sapporo1101"
   }
 }
